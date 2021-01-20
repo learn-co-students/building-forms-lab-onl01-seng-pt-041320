@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
 class BandInput extends Component {
   state = {
@@ -32,4 +31,4 @@ class BandInput extends Component {
   }
 }
 
-export default connect()(BandInput)
+export default BandInput

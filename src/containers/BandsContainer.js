@@ -6,10 +6,18 @@ class BandsContainer extends Component {
   render() {
     return(
       <div>
-        <BandInput />
+        <BandInput addBand={addBand} />
       </div>
     )
   }
 }
 
-export default connect()(BandsContainer)
+const mapDispatchToProps = dispatch => {
+  return {
+    addBand: () => {
+      dispatch(addBand())
+    }
+  }
+}
+
+export default connect(null, mapDispatchToProps)(BandsContainer)
